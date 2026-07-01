@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+                
 struct ContentView: View {
     var body: some View {
         VStack {
@@ -20,12 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    let _ = print("Games finished: \(sample.games(withStatus: .finished).count)")
-    let _ = print("Games with 'mario': \(sample.search("mario").count)")
-    let _ = print("Blank query returns all: \(sample.search("    ").count)")
-    let _ = print("Total finished hours: \(sample.totalFinishedHours)")
-    let _ = print("Completion Rate \(sample.completionRate)")
-    let _ = print("Sorted", sample.sortedByRating().map { game in game.title })
-    let _ = print("Average Rating by Genre: \(sample.averageRatingByGenre())")
     Text("Check Console [:")
 }
