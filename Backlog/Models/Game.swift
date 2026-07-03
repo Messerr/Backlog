@@ -17,3 +17,18 @@ struct Game: Identifiable, Hashable {
     var hoursPlayed: Double
     var addedAt: Date
 }
+
+extension Game {
+    func toStored() -> StoredGame {
+        StoredGame(
+            id: id,
+            title: title,
+            platform: platform,
+            genre: genre,
+            statusRaw: status.rawValue,
+            rating: rating,
+            hoursPlayed: hoursPlayed,
+            addedAt: addedAt
+        )
+    }
+}
